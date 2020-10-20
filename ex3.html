@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+          
+            width: auto;
+            height: 600px;
+        }
+        ul{
+            position:absolute;
+            list-style-type: none;
+            width: 500px;
+           box-sizing: border-box;
+           top: 3px;
+           right: 0px;
+           width: 300px;
+        }
+        a{
+          border: 1px solid white;
+          border-radius: 5px;
+        }
+        #subDiv{
+            position:absolute;
+            height: 300px;
+            width: 600px;
+            top: 200px;
+            left: 400px;
+           
+        }
+        #search{
+            position: absolute;
+            width: 100%;
+            height: 43px;
+            top: 100px;
+            border: 1px solid gray;
+            border-radius: 20px;
+        }
+        .bar{
+            float: left;
+            margin-left: 10px;
+            padding: 5px;
+          
+       } 
+       img{
+            position:absolute;
+            left:150px;
+       }
+       .button{
+           position:absolute;
+           top: 160px;
+           height: 35px;
+           border: 1px solid grey;
+           border-radius: 5px;
+       }
+       #find{
+           left:140px;
+       }
+       #submit{
+         left:260px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+    <ul>
+     <li><a href="https://www.google.com/intl/vi/gmail/about/#" class="bar">Gmail</a></li>
+     <li><a href="https://www.google.com.vn/imghp?hl=vi&tab=wi&ogbl" class="bar">Hình ảnh</a></li>
+    </ul>
+    <div id="subDiv">
+    <img src="google.png" alt="google"><br>
+    <input type="search" name="sear" id="search" autocomplete="youtube">
+    
+    <input type="submit" name="find" id="find" value="Tìm với Google" class="button">
+    <input type="submit" name="submit" id="submit" value="Xem trang đầu tiên tìm được" class="button">
+    
+    </div>
+</div>
+</body>
+</html>
