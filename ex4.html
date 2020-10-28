@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input{
+        height: 20px;
+        width: 317px;
+        
+      }
+      #ho,#ten{
+        width: 150px;
+      }
+      #nam,#nu{
+        width: fit-content;
+
+      }
+      #ten{
+        margin-left: 8px;
+      }
+      fieldset{
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        top: 100px;
+        left:500px;
+      }
+      #submit{
+        position:  absolute;
+        
+       left: 120px;
+       
+      }
+      body{
+        background-image: url("background.png");
+      }
+    
+    </style>
+</head>
+<body>
+  <form>
+     <fieldset>
+          <legend>Đăng kí tài khoản</legend>
+          <input type="text" id="ho" placeholder="Họ" autofocus required><input type="text" id="ten" placeholder="Tên" required><br><br>
+
+          <input type="text" id="username" placeholder="Tên đăng nhập" required><br><br>
+
+          <input type="password" id="password" placeholder="Mật khẩu" required><br><br>
+
+          <input type="password" id="repassword" placeholder="Nhập lại mật khẩu" required><br><br>
+
+          <input type="email" id="email" placeholder="Email" required><br><br>
+
+          <input type="tel" id="telephone" placeholder="Số điện thoại" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"><br><br>
+         <label><b>Ngày sinh: </b></label>
+          <select name="birthday" id="date"> </select> 
+         <select name="birthday" id="month" ></select>
+         <select name="birthday" id="year"></select>
+            
+            <br><br>
+               <label><b>Giới tính:</b></label>
+                <input type="radio" id="nam" name="gender" value="Nam" checked>
+                <label for="nam" id="male">Nam </label>
+                <input type="radio" id="nu" name="gender" value="Nữ">
+                <label for="nu" id="female">Nữ</label>
+                <br><br>
+                <input type="submit" style="width: 100px;" id="submit" >
+     </fieldset>
+     <script>
+      function init(id,n,type){
+        let parent=document.getElementById(id);
+        for(let i=1;i<=n;i++){
+                  var options=document.createElement("option");
+                  var content=document.createTextNode(type+" "+i);
+                  options.value=i;
+                  options.appendChild(content);
+                  parent.appendChild(options);
+                  options.value=i;
+             }
+
+      }
+      function year(id,start,begin,type){
+        let parent=document.getElementById(id);
+        for(let i=start;i<=begin;i++){
+                  var options=document.createElement("option");
+                  var content=document.createTextNode(type+" "+i);
+                  options.value=i;
+                 if(i===2000) options.selected=true;
+                  options.appendChild(content);
+                  parent.appendChild(options);
+                  options.value=i;
+             }
+
+      }
+      init("month",12,"Tháng");
+      init("date",31,"Ngày");
+      year("year",1950,2020,"Năm");
+     
+             
+
+     </script>
+  </form>
+</body>
+</html>
